@@ -1,0 +1,58 @@
+<Alloy>
+	<!-- Main Container of the View, title of the Window is pulled from the title property on the main view-->
+	
+	<Window class="container vgroup buffer fill" title="Selected movie">
+			
+		<ActionBar platfor="android" displayHomeAsUp="true" onHomeIconItemSelected="closeWindow" />	
+		
+		<ScrollView id="contactInfo" class='vgroup top'>
+			
+			<View class='size'>
+				<ImageView id="poster_imageview" class="fill"/>
+				<View id="background_gradient_view" />
+			</View>
+							
+			<View class="vgroup top size">
+				<Label id="title" class='h3 blue no-touch' />
+				<Label id="released" class='h5 gray no-touch' />
+				<Label id="genre" class='h5 gray no-touch' />
+			</View>
+				
+			<View class='separator' />
+				
+				<!-- Contact Information -->
+		 	<View class='vgroup size buffer'>
+				<View class='hgroup size left bottom-buffer top-buffer'>
+					<Label id="director" class="h5 gray" />
+				</View>
+				<View class='hgroup size left bottom-buffer'>
+					<Label id="writers" class="h5 gray" />
+				</View>
+				<View class='hgroup size left bottom-buffer'>
+					<Label id="actors" class="h5 gray" />
+				</View>
+				<View class='hgroup size left bottom-buffer'>
+					<Label id="language" class="h5 gray" />
+				</View>
+				<View class='hgroup size left bottom-buffer'>
+					<Label id="awards" class="h5 gray" />
+				</View>
+				<View class='hgroup size left bottom-buffer'>
+					<Label id="boxoffice" class="h5 gray" />
+				</View>
+				<View class='hgroup size left bottom-buffer'>
+					<Label id="production" class="h5 gray" />
+				</View>
+				<View class='hgroup size left bottom-buffer'>
+					<Label id="website" class="h5 gray" />
+				</View>
+				<View class='hgroup size left bottom-buffer'>
+					<Label id="plot" class="h4 blue" />
+				</View>
+			</View>			
+				
+			<Button id="removeFromWhatched" class="h4 blue buffer" onClick="removeFromWhatched" textid="bookmarkBtn">+ Remove To Watches</Button>
+			
+		</ScrollView>	
+	</Window>
+</Alloy>

@@ -1,0 +1,55 @@
+<Alloy>
+    <Window title="window" class="container vgroup">
+        <ActionBar id="actionbar" title="Selected Movie" />
+        
+        <!-- <View class="top size-width-fill">
+	        <TextArea id="txtSearch" />
+	        <Button id="btnSearch" onClick="searchMovie" />
+	    </View> -->
+	         
+	    <ScrollView id="movieInfo" class='vgroup top buffer fill' visible="false">
+			<!-- User Information -->
+			
+			<View class="hgroup top size elevation">
+				<ImageView id="poster_imageview" class="top left size" />
+				<View class="vgroup size-width-fill right-buffer left-buffer" >
+					<Label id="title" class='h3 blue top-buffer no-touch' />
+					<Label id="released" class='h5 gray no-touch' />
+					<Label id="genre" class='h5 gray no-touch' />
+				</View>
+			</View>	
+				
+						
+			<!-- Contact Information -->
+		 	<View class='vgroup size'>
+				<View class='hgroup size left bottom-buffer top-buffer'>
+					<Label id="director" class="h5 gray" />
+				</View>
+				<View class='hgroup size left bottom-buffer'>
+					<Label id="writers" class="h5 gray" />
+				</View>
+				<View class='hgroup size left bottom-buffer'>
+					<Label id="actors" class="h5 gray" />
+				</View>
+				<View class='hgroup size left bottom-buffer'>
+					<Label id="language" class="h5 gray" />
+				</View>
+				
+				<View class='separator' />
+				<View class='hgroup size left'>
+					<Label id="plot" class="h4 blue" />
+				</View>
+				<View class='separator' />
+			</View>
+			
+			<Button id="addWatchedBtn" class="h4 blue top-buffer span-height" onClick="saveWatchMovie" textid="bookmarkBtn">+ Add To Watched</Button>
+						
+		</ScrollView>	
+
+		
+		<ProgressIndicator ns="Ti.UI.Android" platform="android" id="progressIndicator"
+	         message="Buscando..." cancelable="false"
+	         location="Ti.UI.Android.PROGRESS_INDICATOR_DIALOG"
+	         type="Titanium.UI.Android.PROGRESS_INDICATOR_INDETERMINANT" />
+	</Window>
+</Alloy>

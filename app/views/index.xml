@@ -1,0 +1,5 @@
+<Alloy>
+	<!-- Default App Window -->
+	<Require id="index" src="watched" platform="android,windows" /> 
+	
+</Alloy>

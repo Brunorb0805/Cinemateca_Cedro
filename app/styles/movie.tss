@@ -1,0 +1,103 @@
+/**
+ * 	General element and UI styles
+ */
+"Label":{
+	autoLink: Ti.UI.AUTOLINK_ALL
+},
+
+"#mapview":{
+	enableZoomControls: false,
+	compassEnabled: false,
+	height: "30%",
+},
+
+"#removeFromWhatched[platform=android]":{
+	width: Ti.UI.FILL,
+	height: 50,
+	backgroundColor: 'transparent',
+	borderWidth: 2,
+	borderColor: '#2F4E78',
+	color: '#2F4E78',
+	font: {
+		fontSize: 14,
+    	fontFamily: 'HelveticaNeue-Light'
+	}
+},
+
+".container":{
+	backgroundColor: "#fff",
+	theme: "appcelerator"
+},
+
+'.separator':{
+	top:10,
+	height: 1,
+	width: "95%",
+	backgroundColor:"#2F4E78"
+},
+
+
+/**
+ * 	Action Button Styles
+ *  These styles represent unicode character codes for the icon fonts
+ *  being used to represent the icons on the profile view
+ */
+
+".icon-phone":{
+	text: "\uf095"
+},
+
+".icon-email":{
+	text:"\uf0e0"
+},
+
+".icon-message":{
+	text:"\uf075"
+},
+
+".icon-calendar":{
+	text: "\uf073"
+},
+
+".icon-btn":{
+	height: 60,
+	width: 60,
+	color: "#C41230",
+	borderRadius: 30,
+	borderWidth: 2,
+	borderColor: "#C41230",
+	backgroundColor: "#F2D0D6",
+	textAlign: "center",
+	font:{
+		fontSize: 24
+	},
+	left:"10%"
+},
+
+'.icon-small':{
+	font:{
+		fontSize:18
+	}
+},
+
+"#poster_imageview": {
+	top: 0,
+	left: Alloy.Globals.layout.movie.backdropImageLeft,
+	width: Alloy.Globals.layout.movie.backdropImageWidth,
+	height: Alloy.Globals.layout.movie.backdropImageHeight
+}
+
+"#background_gradient_view": {
+	top: 0,
+	left: Alloy.Globals.layout.movie.backdropImageLeft,
+	width: Alloy.Globals.layout.movie.backdropImageWidth,
+	height: Alloy.Globals.layout.movie.backdropImageHeight,
+	backgroundGradient: {
+        type: 'linear',
+        startPoint: { x: '0%', y: '0%' },
+        endPoint: { x: '0%', y: '100%' },
+        colors: [ { color: '#77000000', offset: 0 },
+        		  { color: '#77000000', offset: 0.5 },
+        		  { color: '#FFFFFF', offset: 0.9 } ],
+    }
+}

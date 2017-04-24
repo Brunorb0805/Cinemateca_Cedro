@@ -1,0 +1,16 @@
+{
+	"global": {
+		"theme":"appcelerator"
+	},
+	"env:development": {},
+	"env:test": {},
+	"env:production": {},
+	"os:android": {
+		"theme":"appcelerator"
+	},
+	"os:blackberry": {},
+	"os:ios": {},
+	"os:mobileweb": {},
+	"os:windows": {},
+	"dependencies": {}
+}

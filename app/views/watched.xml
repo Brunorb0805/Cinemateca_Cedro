@@ -1,0 +1,31 @@
+<Alloy>
+
+	<Window id="wrapper" class="vgroup" title="Watched Movies">
+
+		<Menu id="menu" platform="android">
+					
+			<MenuItem id="searchBtn" title="Search" icon="/images/ic_search_white.png" onClick="onSearchClick" showAsAction="Ti.Android.SHOW_AS_ACTION_IF_ROOM"/>
+        
+        </Menu>        
+
+		<ListView id="listView" defaultItemTemplate="userTemplate" onItemclick="onItemClick">
+			
+			<Templates>
+				<!-- UserTemplate - this is the default ListItem template -->
+				<ItemTemplate id="userTemplate" name="userTemplate" class="template">
+					<View class="left-buffer">
+						<ImageView id="moviePoster" bindId="moviePoster" class="avatar" />
+						<View platform="android" class="smoothAvatarBorderRadius" />
+						<View class="vgroup left size">
+							<Label id="movieTitle" bindId="movieTitle" class="title" />
+							<Label id="movieRuntime" bindId="movieRuntime" class="subtitle" />
+							<Label id="movieGenre" bindId="movieGenre" class="subtitle" />
+						</View>
+						<View class="gray-line bottom"/>
+					</View>
+				</ItemTemplate>	
+			</Templates>
+						
+		</ListView>
+	</Window>
+</Alloy>

@@ -1,0 +1,35 @@
+<Alloy>
+	<Window title="window" class="container vgroup">
+        <ActionBar id="actionbar" title="Search Movie" />
+        
+        <View class="top size-width-fill">
+	        <TextArea id="txtSearch" />
+	        <Button id="btnSearch" onClick="searchMovie" />
+	    </View>
+	         
+	    <ListView id="listView" defaultItemTemplate="userTemplate" onItemclick="onItemClick">
+			
+			<Templates>
+				<!-- UserTemplate - this is the default ListItem template -->
+				<ItemTemplate id="userTemplate" name="userTemplate" class="template">
+					<View class="left-buffer">
+						<ImageView id="moviePoster" bindId="moviePoster" class="avatar" />
+						<View platform="android" class="smoothAvatarBorderRadius" />
+						<View class="vgroup left size">
+							<Label id="movieTitle" bindId="movieTitle" class="title" />
+							<Label id="movieYear" bindId="movieYear" class="subtitle" />
+							<Label id="type" bindId="type" class="subtitle" />
+						</View>
+						<View class="gray-line bottom"/>
+					</View>
+				</ItemTemplate>	
+			</Templates>
+						
+		</ListView>	
+			
+		<ProgressIndicator ns="Ti.UI.Android" platform="android" id="progressIndicator"
+	         message="Buscando..." cancelable="false"
+	         location="Ti.UI.Android.PROGRESS_INDICATOR_DIALOG"
+	         type="Titanium.UI.Android.PROGRESS_INDICATOR_INDETERMINANT" />
+	</Window>
+</Alloy>

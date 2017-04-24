@@ -1,0 +1,73 @@
+"#window": {
+	fullscreen: false,
+	navBarHidden: true,
+	orientationModes: [Ti.UI.PORTRAIT],
+}
+
+
+"#txtSearch": {
+	width: Ti.UI.FILL,
+	top: 10, left: 5, height: 40, color: '#808080', maxLength: 40,
+    textAlign: "left", hintText:"Qual filme você procura?",
+    returnKeyType: Ti.UI.RETURNKEY_GO
+}
+
+"#btnSearch": {
+	backgroundImage: "/images/ic_search.png",
+	width:30, height:30, top:10, right:5
+}
+
+
+"#background_gradient_view": {
+	top: 0,
+	left: 0,
+	width: Ti.UI.FILL,
+	height: '40%',
+	backgroundGradient: {
+        type: 'linear',
+        startPoint: { x: '0%', y: '0%' },
+        endPoint: { x: '0%', y: '100%' },
+        colors: [ { color: '#77000000', offset: 0 },
+        		  { color: '#77000000', offset: 0.5 },
+        		  { color: '#ffffff', offset: 0.9 } ],
+    }
+}
+
+
+
+"#addWatchedBtn": {
+	width: Ti.UI.FILL,
+	height: 50,
+	backgroundColor: '#FFFFFF',
+	borderWidth: 2,
+	borderColor: '#2F4E78',
+	color: '#2F4E78',
+	font: {
+		fontSize: 14,
+    	fontFamily: 'HelveticaNeue-Light'
+	}
+}
+
+
+"#poster_imageview": {
+	borderColor: '#66ffffff',
+	borderWidth: 0.5,
+	width: Alloy.Globals.layout.movie.posterWidth,
+	height: Alloy.Globals.layout.movie.posterHeight,
+	preventDefaultImage: true
+}
+
+
+"#title_label[platform=android]": {
+	font: {
+		fontFamily: 'sans-serif',
+		fontWeight: 'bold'
+	}
+}
+
+'.separator':{
+	top:10,
+	height: 1,
+	width: "95%",
+	backgroundColor:"#2F4E78"
+},
